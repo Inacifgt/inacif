@@ -1,0 +1,107 @@
+<html>
+<head>
+	<title>Inacif</title>
+	<link rel="stylesheet" type="text/css" href="\hoja\css\estilos.css">
+	<link rel="stylesheet" href="\inacif\css\bootstrap.min.css">
+<title>Imagen en movimiento</title>
+	<style>
+		.slider {
+			position: relative;
+			width: 40%;
+			height: 420px;
+			overflow: hidden;
+		}
+		.slider img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity 1s ease;
+		}
+		.slider img.active {
+			opacity: 1;
+		}
+	</style>
+	<style>
+		.contenedor {
+			width: 100%;
+			overflow: hidden;
+		}
+		.imagen {
+			float: left;
+			margin-right: 360px;
+		}
+	</style>
+	<style>
+		.fondo-multicolor {
+			background-image: linear-gradient(to bottom right, white);
+		}
+	</style>
+</head>
+<body>
+<center>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+<font size="+2"><a href="/inacif/html/principal.html" button class="btn btn-primary me-md-2" type="button">Inicio </a></font>&nbsp;
+<font size="+2"><a href="/inacif/html/historia.html" button type="button" class="btn btn-secondary">Historia</a></font>&nbsp;
+<font size="+2"><a href="/inacif/html/miyvi.html" button type="button" class="btn btn-secondary">Mision Y vision</a></font>&nbsp; 
+<font size="+2"><a href="/inacif/html/servicios.html" button type="button" class="btn btn-danger">Servicios</a></font>&nbsp; 
+<font size="+2"><a href="/inacif/html/publi.html" button type="button" class="btn btn-warning">Publicaciones</a></font>&nbsp;
+<a href="/inacif/index.html"button type="button" class="btn btn-danger">Cerrar Sesion</a>&nbsp;
+</div></center>
+	<hr color="red">
+	<img src="\inacif\imagenes\logo.png" alt="mi foto" width="250" height="185"/>
+	<br>
+	<center><h1><i>INACIF</i></h1></center>
+		<br>
+		<p><font size="+2">Somos una institución con autonomía funcional e independiente que surge como consecuencia de la necesidad de unificar y fortalecer los servicios periciales forenses en Guatemala, mediante el desarrollo científico del trabajo que realiza como institución autónoma, garantizando la imparcialidad y confiabilidad de la investigación técnica científica, contribuyendo así al sistema de justicia.</font></p>
+		<center><div class="slider">
+		<img class="active" src="/inacif/imagenes/dones.jpeg" align="100" height="100">
+		<img src="/inacif/imagenes/ota.jpeg" align="100" height="100">
+		<img src="/inacif/imagenes/pos.jpeg" align="100" height="100">
+	</div></center>
+	<script>
+		const imagenes = document.querySelectorAll('.slider img');
+		let indice = 0;
+		function cambiarImagen() {
+			imagenes[indice].classList.remove('active');
+			indice = (indice + 1) % imagenes.length;
+			imagenes[indice].classList.add('active');
+		}
+		setInterval(cambiarImagen, 3000);
+	</script>
+<p><font size="+2"><b>El Instituto Nacional de Ciencias Forenses de Guatemala -también conocido como INACIF– es un institución del gobierno de Guatemala, creado en el año 2006 y cuya función es proveer de medios de prueba válidos y fehacientes a los procesos judiciales. Su finalidad, en otras palabras, es la prestación del servicio de investigación científica de forma independiente, emitiendo dictámenes técnicos científicos (Instituto Nacional de Ciencias Forenses de Guatemala, 2011).
+
+La institución reemplazó al Servicio Médico Forense del Organismo Judicial del Estado de Guatemala (Mendoza y Reyes, 2007).</b></p></font>
+<br>
+<div class="contenedor">
+		<img class="imagen" src="/inacif/imagenes/jo.jpeg" align="200" height="200">
+		<img class="imagen" src="/inacif/imagenes/cha.jpg" align="200" height="200">
+	</div>
+	<h1><center><font color="blue"><i>Aspecto legal</i></font></center>
+		<p><font size="+2">El INACIF es una institución con autonomía funcional e independiente que surge como consecuencia de la necesidad de unificar y fortalecer los servicios periciales forenses en Guatemala, mediante el desarrollo científico del trabajo que realiza como institución autónoma, garantizando la imparcialidad y confiabilidad de la investigación técnica científica, contribuyendo así al sistema de justicia (Instituto Nacional de Ciencias Forenses de Guatemala, 2011).<br>
+<br>
+Tiene como finalidad principal la prestación del servicio de investigación científica de forma independiete, emitiendo dictámentes técnicos científicos que doten a la función jurisdiccional, con medios de prueba válidos y fehacientes en los procesos judiciales. Presta sus servicios a requerimiento de jueces y fiscales. El INACIF no actúa de oficio (Instituto Nacional de Ciencias Forenses de Guatemala, 2011).<br>
+<br>
+El consejo Directivo del INACIF está integrado por el Presidente de la Corte Suprema de Justicia, el Ministro de Gobernación, el Fiscal General de la República de Guatemala, el Director del Instituto de la Defensa Pública Penal, el Presidente de la Junta Directiva del Colegio de Médicos y Cirujanos de Guatemala, el Presidente de la Junta Directiva del Colegio de Químicos y Farmacéuticos de Guatemala y el Presidente del Colegio de Abogados y Notarios de Guatemala (Instituto Nacional de Ciencias Forenses de Guatemala, 2011).</font></p>
+<br>
+<body class="fondo-multicolor">
+<center><center><img src="/inacif/imagenes/chalas.jpg" align="200" height="200"></center>
+<hr color="red">
+<a href="https://www.facebook.com/Inacifgt/">
+<img src="/inacif/imagenes/face.png" align="50" height="50">
+</a>
+<a href="https://twitter.com/inacifgt">
+<img src="/inacif/imagenes/twit.png" align="50" height="50">
+</a>
+<a href="https://www.youtube.com/user/inacifgt">
+<img src="/inacif/imagenes/you.png" align="50" height="50">
+</a>
+<a href="https://www.instagram.com/inacifgt/?ref=badge">
+<img src="/inacif/imagenes/insta.png" align="50" height="50">
+</a></center>
+<p><center>Somos una institución con autonomía funcional e<br> independiente que surge como consecuencia de la necesidad de unificar y fortalecer los servicios periciales forenses en Guatemala, mediante el desarrollo científico del trabajo que realiza como institución autónoma, garantizando la imparcialidad y confiabilidad de la investigación técnica científica, contribuyendo así al sistema de justicia.</center></p>
+<center><img src="/inacif/imagenes/logo.png" align="75" height="75"></center>
+</body>
+</html
