@@ -3,6 +3,26 @@
 	<title>Mision y Vision</title>
 	<link rel="stylesheet" type="text/css" href="\hoja\css\estilos.css">
 	<link rel="stylesheet" href="\inacif\css\bootstrap.min.css">
+	<style>
+		.slider {
+			position: relative;
+			width: 40%;
+			height: 420px;
+			overflow: hidden;
+		}
+		.slider img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity 1s ease;
+		}
+		.slider img.active {
+			opacity: 1;
+		}
+	</style>
 </head>
 <body>
 	<center>
@@ -14,8 +34,46 @@
 <font size="+2"><a href="/inacif/html/publi.html" button type="button" class="btn btn-warning">Publicaciones</a></font>&nbsp;
 </center>
 <hr color="red">
+<img src="\inacif\imagenes\logo.png" alt="mi foto" width="250" height="185"/>
+<center><img src="/inacif/imagenes/cola.png" align="200" height="200"></center>
 <br>
+<h5><i><center>Su misión es convertir los indicios en elemento útil para el sistema de justicia, mediante la realización de análisis técnico científicos<br> en materia forense y estudios médico legales apegados a la objetividad, transparencia y autonomía, fundamentados en ciencia o arte <br>y basados en el trabajo en equipo (Instituto Nacional de Ciencias Forenses de Guatemala, 2011).</center></i></h5>
 <br>
-
+<center><img src="/inacif/imagenes/colo.png" align="200" height="200"></center>
+<br>
+<h5><i><center>La visión del Instituto Nacional de Ciencias Forenses de Guatemala es fortalecerse mediante la mejora continua en sus procesos, en una institución del sector de justicia autónoma, independiente y confiable, que busca mediante el esfuerzo conjunto, servir a la sociedad guatemalteca en forma efectiva y eficiente en el ámbito de la investigación científico forense (Instituto Nacional de Ciencias Forenses de Guatemala, 2011).</center></i></h5>
+<br>
+<center>
+<div class="slider">
+		<img class="active" src="/inacif/imagenes/OBJETIVOS.jpg" alt="Imagen 1">
+		<img src="/inacif/imagenes/calidad.jpg" alt="Imagen 2">
+		<img src="/inacif/imagenes/mision.jpg" alt="Imagen 3">
+	</div>
+	<script>
+		const imagenes = document.querySelectorAll('.slider img');
+		let indice = 0;
+		function cambiarImagen() {
+			imagenes[indice].classList.remove('active');
+			indice = (indice + 1) % imagenes.length;
+			imagenes[indice].classList.add('active');
+		}
+		setInterval(cambiarImagen, 2000);
+	</script>
+</center>
+<hr color="red">
+<a href="https://www.facebook.com/Inacifgt/">
+<img src="/inacif/imagenes/face.png" align="50" height="50">
+</a>
+<a href="https://twitter.com/inacifgt">
+<img src="/inacif/imagenes/twit.png" align="50" height="50">
+</a>
+<a href="https://www.youtube.com/user/inacifgt">
+<img src="/inacif/imagenes/you.png" align="50" height="50">
+</a>
+<a href="https://www.instagram.com/inacifgt/?ref=badge">
+<img src="/inacif/imagenes/insta.png" align="50" height="50">
+</a></center>
+<p><center>Somos una institución con autonomía funcional e<br> independiente que surge como consecuencia de la necesidad de unificar y fortalecer los servicios periciales forenses en Guatemala, mediante el desarrollo científico del trabajo que realiza como institución autónoma, garantizando la imparcialidad y confiabilidad de la investigación técnica científica, contribuyendo así al sistema de justicia.</center></p>
+<center><img src="/inacif/imagenes/logo.png" align="75" height="75"></center>
 </body>
 </html>
